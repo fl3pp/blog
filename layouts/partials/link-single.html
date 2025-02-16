@@ -1,0 +1,7 @@
+<a href="{{ .RelPermalink }}">
+   {{ if eq .Section "books" }}
+      <b>{{ .LinkTitle }}</b> <span class="lighter">{{ .Params.bookSubtitle }} <i>({{ .Params.bookAuthor }}, {{time.AsTime .Params.bookPublishDate | time.Format "2006"}})</i></span> 
+   {{ else }}
+      <b>{{ .Title }}</b> <span class="lighter">{{ .Params.Subtitle }}</span>
+   {{ end }}
+</a>

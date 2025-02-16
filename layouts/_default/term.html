@@ -1,0 +1,5 @@
+{{ define "main" }}
+   <h1>{{ if eq .Type "tags" }}<code>#</code>{{ end }}{{ .Title }}</h1>
+   {{ .Content }}
+   {{partial "link-list.html" .Pages}}
+{{ end }}

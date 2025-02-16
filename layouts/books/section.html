@@ -1,0 +1,14 @@
+{{ define "main" }}
+   {{ .Content }}
+
+   <div class="link-lists">
+      {{ range .Pages.GroupByParam "bookGenre" }}
+         <h2>{{ .Key }}</h2>
+         <ul class="link-list">
+            {{ range .Pages }}
+               <li>{{ partial "link-single.html" . }}</li>
+            {{ end }}
+         </ul>
+      {{ end }}
+   </div>
+{{ end }}

@@ -1,0 +1,15 @@
+baseURL: 'blog.fl3pp.ch'
+languageCode: 'en-us'
+title: 'blog.fl3pp.ch'
+disableKinds:
+- taxonomy
+taxonomies:
+  tag: tags
+pluralizelisttitles: false
+capitalizeListTitles: false
+permalinks:
+  posts: '/:slug/'
+  books: '/:slug/'
+  home: '/'
+pygmentsUseClasses: true
+pygmentsCodefences: true

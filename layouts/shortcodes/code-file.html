@@ -1,0 +1,7 @@
+{{ $language := .Get "language" }}
+{{ $source := .Get "source" }}
+{{ $options := .Get "options" }}
+
+{{ with (path.Join (path.Dir .Page.File.Path) (.Get 0) $source) | readFile }}
+  {{ highlight (trim . "\n\r") $language $options }}
+{{ end }}

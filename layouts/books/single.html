@@ -1,0 +1,34 @@
+{{ define "main" }}
+   <div class="book-cover-float-right">
+      <img src="{{ .Params.bookCoverUrl }}" />
+   </div>
+
+   <div class="book-review-metadata">
+      <h1 class="post-title">Book Review: {{ .Params.bookTitle }}</h1>
+      {{ partial "metadata-list.html" . }}
+      <p class="lighter">
+         {{ .Params.bookTitle }} {{ .Params.bookSubtitle }}
+         <br /> by {{ .Params.bookAuthor }}
+         <br /> published {{ time.AsTime .Params.bookPublishDate | time.Format "2. January 2006" }}, {{ .Params.bookPublisher }}
+      </p>
+   </div>
+
+   <div class="book-cover-center-bottom">
+      <img src="{{ .Params.bookCoverUrl }}" />
+   </div>
+
+   {{ $solidStar := "/static/icons/star-solid.svg" | readFile | safeHTML }}
+   {{ $emptyStar := "/static/icons/star-regular.svg" | readFile | safeHTML }}
+   <h1 class="post-title">
+      Rating:
+      <div class="star-collection">
+         {{ if ge .Params.bookReviewGrade 1 }}{{ $solidStar }} {{ else }} {{ $emptyStar }} {{ end }}
+         {{ if ge .Params.bookReviewGrade 2 }}{{ $solidStar }} {{ else }} {{ $emptyStar }} {{ end }}
+         {{ if ge .Params.bookReviewGrade 3 }}{{ $solidStar }} {{ else }} {{ $emptyStar }} {{ end }}
+         {{ if ge .Params.bookReviewGrade 4 }}{{ $solidStar }} {{ else }} {{ $emptyStar }} {{ end }}
+         {{ if ge .Params.bookReviewGrade 5 }}{{ $solidStar }} {{ else }} {{ $emptyStar }} {{ end }}
+      </div>
+   </h1>
+
+	{{ .Content }}
+{{ end }}

@@ -1,0 +1,13 @@
+<div class="post-metadata">
+   <div class="post-metadata-entry">{{ "/static/icons/calendar-solid.svg" | readFile | safeHTML }} {{ time.Format "2 January 2006" .Page.Date }}</div>
+   <div class="post-metadata-entry">{{ "/static/icons/clock-solid.svg" | readFile | safeHTML }} {{ printf "%.0f min" (math.Ceil (div (float .WordCount) 150)) }}</div>
+   <div class="post-metadata-entry">{{ "/static/icons/user-solid.svg" | readFile | safeHTML }} Jann Flepp</div>
+
+   {{ $tags := .Site.Taxonomies.tags }}
+   {{ $site := .Site }}
+   {{ range $tag := .Params.tags }}
+      {{ $term := $tags.Get $tag }}
+      {{ $termPage := site.GetPage $tag }}
+      <a href="/{{ $termPage.Permalink }}"><div class="post-metadata-entry"><code>#</code>{{ $termPage.LinkTitle }}<span class="lighter">({{ $term.Count }})</span></div></a>
+   {{ end }}
+</div>

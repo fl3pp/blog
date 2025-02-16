@@ -1,0 +1,15 @@
+<footer>
+   <hr>
+
+   <div class="footer-columns">
+      <div class="left">
+         <a href="{{ .Site.BaseURL }}/index.xml" target="_blank">{{ "/static/icons/rss-solid.svg" | readFile | safeHTML }}</a>
+         <a href="https://www.linkedin.com/in/jann-flepp-052b62216" target="_blank">{{ "/static/icons/linkedin-brands-solid.svg" | readFile | safeHTML }}</a>
+         <a href="https://github.com/fl3pp" target="_blank">{{ "/static/icons/github-brands-solid.svg" | readFile | safeHTML }}</a>
+         <a href="https://www.goodreads.com/user/show/81223280-fl3pp" target="_blank">{{ "/static/icons/goodreads-g-brands-solid.svg" | readFile | safeHTML }}</a>
+      </div>
+      <div class="center lighter"><p>© {{ if .Date }} {{ time.Format "2006" .Date }} {{ else }} {{ time.Format "2006" time.Now }} {{ end }}</p></div>
+      <div class="right lighter"><p><a href="{{ ref . "/third-parties" }}">third-parties</a></p></div>
+   </div>
+
+</footer>

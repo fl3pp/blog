@@ -1,0 +1,43 @@
+{{ define "main" }}
+
+   {{ .Content }}
+
+   {{ $bookReviews := where .Site.RegularPages "Type" "books" }}
+   {{ $regularPosts := where .Site.RegularPages "Type" "posts" }}
+   {{ $allPosts := collections.Sort (collections.Union $bookReviews $regularPosts) "Date" }}
+   {{ $featuredPosts := where $regularPosts ".Params.featured" true }}
+
+   <div class="link-lists">
+
+      {{ if compare.Ge (len $featuredPosts) 1 }}
+         <h2>Featured</h2>
+         <ul class="link-list">
+            {{ range $featuredPosts }}
+               <li>{{ partial "link-single.html" . }}</li>
+            {{ end }}
+         </ul>
+      {{ end }}
+
+      <h2>Latest</h2>
+      <ul class="link-list">
+         {{ range collections.First 10 $regularPosts }}
+            <li>{{ partial "link-single.html" . }}</li>
+         {{ end }}
+         <li><a href="{{ (site.GetPage "/posts").Permalink }}">more...</a></li>
+      </ul>
+
+      <h2>Tags</h2>
+      {{ range $term, $taxonomy := .Site.Taxonomies.tags}}
+         {{ $termPage := site.GetPage $term }}
+         <a class="tag-link" href="/{{ $termPage.Permalink }}"><b><code>#</code>{{ $termPage.LinkTitle }}</b><span class="lighter">({{ .Count  }})</span></a>
+      {{ end }}
+
+      <h2>Book Reviews</h2>
+      <ul class="link-list">
+         {{ range collections.First 5 $bookReviews }}
+            <li>{{ partial "link-single.html" . }}</li>
+         {{ end }}
+         <li><a href="{{ (site.GetPage "/books").Permalink }}">more...</a></li>
+      </ul>
+   </div>
+{{ end }}
