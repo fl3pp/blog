@@ -208,7 +208,6 @@ nav {
     @media (min-width: 2600px) {
         width: calc((100% - 1800px)/2 - 2rem);
     }
-
     
     a { text-decoration: none; }
 
@@ -409,6 +408,11 @@ footer {
         padding-bottom: 3px;
         fill: $color-dark-alternative;
     }
+}
+
+.giscus {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 $syntax-red: #830200;
