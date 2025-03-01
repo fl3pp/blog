@@ -29,7 +29,7 @@
       <h2>Tags</h2>
       {{ range $term, $taxonomy := .Site.Taxonomies.tags}}
          {{ $termPage := site.GetPage $term }}
-         <a class="tag-link" href="/{{ $termPage.Permalink }}"><b><code>#</code>{{ $termPage.LinkTitle }}</b><span class="lighter">({{ .Count  }})</span></a>
+         <a class="tag-link" href="{{ $termPage.Permalink }}"><b><code>#</code>{{ $termPage.LinkTitle }}</b><span class="lighter">({{ .Count  }})</span></a>
       {{ end }}
 
       <h2>Book Reviews</h2>
