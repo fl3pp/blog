@@ -9,7 +9,11 @@
          <a href="https://www.goodreads.com/user/show/81223280-fl3pp" target="_blank">{{ "/static/icons/goodreads-g-brands-solid.svg" | readFile | safeHTML }}</a>
       </div>
       <div class="center lighter"><p>© {{ if .Date }} {{ time.Format "2006" .Date }} {{ else }} {{ time.Format "2006" time.Now }} {{ end }}</p></div>
-      <div class="right lighter"><p><a href="{{ ref . "/third-parties" }}">third-parties</a></p></div>
+      <div class="right lighter">
+         <p><a href="{{ ref . "/privacy-policy" }}">Privacy Policy</a></p>
+         <br>
+         <p><a href="{{ ref . "/disclaimer" }}">Disclaimer</a></p>
+      </div>
    </div>
 
 </footer>
