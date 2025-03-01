@@ -8,6 +8,6 @@
    {{ range $tag := .Params.tags }}
       {{ $term := $tags.Get $tag }}
       {{ $termPage := site.GetPage $tag }}
-      <a href="/{{ $termPage.Permalink }}"><div class="post-metadata-entry"><code>#</code>{{ $termPage.LinkTitle }}<span class="lighter">({{ $term.Count }})</span></div></a>
+      <a href="{{ $termPage.Permalink }}"><div class="post-metadata-entry"><code>#</code>{{ $termPage.LinkTitle }}<span class="lighter">({{ $term.Count }})</span></div></a>
    {{ end }}
 </div>
