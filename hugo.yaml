@@ -1,4 +1,4 @@
-baseURL: 'blog.fl3pp.ch'
+baseURL: 'https://blog.fl3pp.ch'
 languageCode: 'en-us'
 title: 'blog.fl3pp.ch'
 disableKinds:
