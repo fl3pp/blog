@@ -1,4 +1,4 @@
-name: Deploy Site to GitHub Pages
+name: Build with Hugo & Deploy to GitHub Pages
 # action template: https://gohugo.io/hosting-and-deployment/hosting-on-github/
 
 on:
@@ -56,14 +56,14 @@ jobs:
         with:
           path: ./public
 
-#  deploy:
-#    environment:
-#      name: github-pages
-#      url: ${{ steps.deployment.outputs.page_url }}
-#    runs-on: ubuntu-latest
-#    needs: build
-#    steps:
-#
-#      - name: Deploy to GitHub Pages
-#        id: deployment
-#        uses: actions/deploy-pages@v4
+  deploy:
+    environment:
+      name: github-pages
+      url: fl3pp.github.io
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
