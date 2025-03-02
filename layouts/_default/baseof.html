@@ -13,9 +13,8 @@
    {{ $style := resources.Get "scss/style.scss" | toCSS | minify }}
    <link rel="stylesheet" href="{{ $style.RelPermalink }}">
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap&display=swap" rel="stylesheet">
+   <link href="/fonts/jetbrains-mono.css" rel="stylesheet">
+   <link href="/fonts/noto-serif.css" rel="stylesheet">
 </head>
 <body>
    <div id="container">
@@ -31,5 +30,6 @@
 
    {{ readFile "/assets/js/dl-separation.js" | safeHTML }}
    {{ readFile "/assets/js/toc.js" | safeHTML }}
+   {{ partial "cookie-banner.html" . }}
 </body>
 </html>

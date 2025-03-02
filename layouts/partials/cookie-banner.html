@@ -1,0 +1,24 @@
+<div id="cookie-banner">
+   <p>
+      This website uses cookies to provide necessary functionality.
+      <a href="/privacy-policy">Learn more</a>
+   </p>
+   <button onclick="dismissCookieBanner()">Got it!</button>
+</div>
+
+<script>
+   function dismissCookieBanner() {
+       document.getElementById('cookie-banner').style.display = 'none';
+   }
+
+   document.addEventListener('DOMContentLoaded', (event) => {
+       if (localStorage.getItem('cookieAccepted') === 'true') {
+           dismissCookieBanner();
+       }
+   });
+
+   function dismissCookieBanner() {
+       document.getElementById('cookie-banner').style.display = 'none';
+       localStorage.setItem('cookieAccepted', 'true');
+   }
+</script>

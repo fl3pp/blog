@@ -285,6 +285,44 @@ footer {
     }
 }
 
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 1rem;
+    max-width: 200px;
+    background-color: #fff;
+    color: $color-black;
+    padding: .5rem;
+    text-align: left;
+    border-radius: 8px;
+    border: 1.5px solid $color-black;
+    font-size: .9rem;
+    z-index: 1000;
+
+    p {
+        margin: 0;
+    }
+
+    button {
+        font-size: 1rem;
+        background-color: #fff;
+        border: 1.5px solid $color-dark-alternative;
+        color: $color-dark-alternative;
+        text-align: center;
+        width: 100%;
+        margin-top: .5rem;
+        border-radius: 8px;
+    }
+
+    button:hover, button:active {
+        background-color: $color-dark-alternative;
+        cursor: pointer;
+        border: 1.5px solid #fff;
+        color: #fff;
+    }
+}
+
 .post-title {
     margin-bottom: 0px;
 }
