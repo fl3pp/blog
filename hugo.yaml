@@ -11,5 +11,9 @@ permalinks:
   posts: '/:slug/'
   books: '/:slug/'
   home: '/'
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
 pygmentsUseClasses: true
 pygmentsCodefences: true
