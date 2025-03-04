@@ -1,8 +1,19 @@
 $color-black: #000000;
+$color-gray-light: #f4f4f4;;
 $color-dark-alternative: #800200;
 
 $a-tags: 'a, a:active, a:visited';
 $a-tags-hover: 'a:active, a:hover, a:visited:hover';
+
+@mixin border {
+    border: $color-black solid 1.5px;
+    border-radius: 15px;
+}
+
+@mixin overflow-x {
+    overflow-x: auto;
+    max-width: 100%;
+}
 
 html {
     font-size: 18px;  // Default font size
@@ -26,6 +37,11 @@ body {
 code {
     font-family: 'JetBrains Mono', monospace;
     font-size: .9rem;
+}
+
+strong {
+    font-weight: bold;
+    color: $color-dark-alternative;
 }
 
 li {
@@ -54,6 +70,52 @@ ul, ol > li {
             display: inline;
             margin: 0;
         }
+    }
+}
+
+table {
+    border-collapse: collapse;
+    display: block;
+    width: 100%;
+
+    th, td {
+        padding: .3rem;
+    }
+
+    th {
+        color: $color-dark-alternative;
+    }
+
+    tr, th {
+        border-bottom: 1px solid $color-black;
+    }
+
+    tr:last-child { 
+        border-bottom: none; 
+    }
+
+    thead {
+        tr {
+            text-align: left;
+        }
+    }
+
+    tbody {
+        tr:nth-child(odd) {
+            background-color: $color-gray-light;
+        }
+    }
+}
+
+.overflow-table {
+    @include overflow-x;
+
+    table {
+        display: block;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        margin: 0 auto;
+        white-space: nowrap;
     }
 }
 
@@ -459,12 +521,13 @@ $syntax-green-generic: #008000;
 $syntax-literal-string: #a31515;
 $syntax-number-blue: #2d2def;
 
-.highlight {
-    overflow-x: auto;
-    max-width: 100%;
-    border: $color-black solid 1.5px;
+pre {
+    @include border;
+    @include overflow-x;
     padding: .5rem;
-    border-radius: 15px;
+}
+
+.highlight {
 
     .chroma { margin:0 }
     /* Background */ .bg { background-color:#fff; }
