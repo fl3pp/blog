@@ -39,6 +39,11 @@ code {
     font-size: .9rem;
 }
 
+strong {
+    font-weight: bold;
+    color: $color-dark-alternative;
+}
+
 li {
     margin-top: 2px;
 }
