@@ -137,3 +137,7 @@ The resulting directory structure will look like this (files omitted for brevity
 The structure would, of course, look a bit different if we built the solution in release mode, published the projects, created NuGet packages or similar, as explained in [Default Paths](#default-paths).
 
 Also note that this sample was created with the .NET SDK version 9.0.100, the behavior might differ in prior or future versions.
+
+## More Information
+
+If you would like to learn more about the `ArtifactsPath` property, you can consult the official documentation on the [MS Docs](https://learn.microsoft.com/en-us/dotnet/core/sdk/artifacts-output). A more powerful, albeit more technical, way to discover your possibilities is by analyzing a binary log of your build using the [Structured Log Viewer](https://msbuildlog.com/).
