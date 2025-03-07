@@ -1,6 +1,6 @@
 ---
 title: 'Test-Driven Development'
-slug: 'test-drive-development-by-example'
+slug: 'test-driven-development-by-example'
 date: '2024-11-06'
 params:
   bookTitle: 'Test-Driven Development'

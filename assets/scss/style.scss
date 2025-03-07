@@ -44,6 +44,13 @@ strong {
     color: $color-dark-alternative;
 }
 
+blockquote {
+    border-left: 1.5px solid black;
+    margin-left: 1rem;
+    padding-left: 1rem;
+    margin-right: 0;
+}
+
 li {
     margin-top: 2px;
 }
@@ -277,6 +284,11 @@ nav {
         list-style: none;
         padding: 0;
         margin: 0;
+
+        li {
+            margin-top: .7rem;
+            line-height: .85;
+        }
 
         .toc-item-h1 { font-weight: normal; }
         .toc-item-h2 { }
