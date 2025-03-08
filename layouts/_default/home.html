@@ -2,8 +2,9 @@
 
    {{ .Content }}
 
-   {{ $bookReviews := where .Site.RegularPages "Type" "books" }}
-   {{ $regularPosts := where .Site.RegularPages "Type" "posts" }}
+   {{ $allPages := where .Site.AllPages "IsPage" true }}
+   {{ $bookReviews := where $allPages "Type" "books" }}
+   {{ $regularPosts := where $allPages "Type" "posts" }}
    {{ $allPosts := collections.Sort (collections.Union $bookReviews $regularPosts) "Date" }}
    {{ $featuredPosts := where $regularPosts ".Params.featured" true }}
 
@@ -20,7 +21,7 @@
 
       <h2>Latest</h2>
       <ul class="link-list">
-         {{ range collections.First 10 $regularPosts }}
+         {{ range (where (collections.First 10 $regularPosts) ".Params.hideFromLatest" "ne" true) }}
             <li>{{ partial "link-single.html" . }}</li>
          {{ end }}
          <li><a href="{{ (site.GetPage "/posts").Permalink }}">more...</a></li>
