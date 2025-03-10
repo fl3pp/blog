@@ -167,6 +167,14 @@ This point can cause a bit of controversy, as some people argue in one or the ot
 
 ## Typical Features
 
-Now that my rant is over, let's look at some typical features of nicely implemented sum types:
+I hope that we've now cleared up what we regard as algebraic type systems. However, until now, we've looked at the concept from a definition standpoint only, and haven't yet considered the 'client' side if you will, or how working with algebraic types should feel like. Of course, this is ends in language features to complement the concept.
+
+Fortunately, the list of 'necessary' features is quite short and can be summarized to a single point: _Pattern matching_.
+
+### Pattern Matching
+
+### Exhaustive Patterns
 
 Such types are usually unable to contain behavior, but can be written in a highly expressive and terse syntax. 
+
+## Relevancy for Pragmatists
