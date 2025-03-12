@@ -1,14 +1,11 @@
 ---
 title: An Introduction to Algebraic Type Systems
-slug: /csharp-algebraic-type-systems/introduction
+slug: csharp-algebraic-type-systems/introduction
 date: '2025-03-05'
-tags:
-- CSharp
-- dotnet
 ---
 
 <span class="lighter">
-This post is part of a series on algebraic type systems in C#. A navigation of the series can be found under <a href="/csharp-algebraic-type-systems">Algebraic Type Systems in C#</a>. In this part, we'll get to know what algebraic type systems are, and why they are useful. We will not dive into C# related topics, but rather focus on the concept of algebraic type systems in general.
+This post is part of a series on algebraic type systems in C#. A navigation of the series can be found under <a href="/csharp-algebraic-type-systems">Algebraic Type Systems in C#</a>. In this part, we'll get to know what algebraic type systems are, and why they are useful. For now, we will not dive into C# related topics, but rather focus on the concept of algebraic type systems in general.
 </span>
 
 Before we begin, I want to note that this article is aimed at beginners unfamiliar with algebraic type systems. I may omit details or simplify concepts to make them more approachable, and do thus not claim to be fully accurate. However, we'll dive deep enough to build an understanding of what algebraic type systems are and how you can use them in practice. If you're already familiar with algebraic type systems, I recommend skipping this article.
@@ -161,20 +158,81 @@ While this is a valid interpretation of sum types, it's not very useful in pract
 
 As promised, we're going to focus on the practicality of algebraic type systems. Thus, from this point on and throughout the series, we'll only consider discriminated unions as sum types required for a language to feature an algebraic type system.
 
-According to this definition, languages such as C# and TypeScript do not feature algebraic type systems, even if [Wikipedia says so](https://en.wikipedia.org/wiki/Algebraic_data_type).
+According to this definition, languages such as C# and TypeScript do not feature algebraic type systems, even if [Wikipedia says so](https://en.wikipedia.org/wiki/Algebraic_data_type) and is technically correct.
 
 This point can cause a bit of controversy, as some people argue in one or the other way. We're taking the easy way out by making up our own definition because we're focused on _practical_ algebraic type systems, not _theoretical_ ones. Just keep in mind that the theoretical definition is broader, and we're good to go.
 
 ## Typical Features
 
-I hope that we've now cleared up what we regard as algebraic type systems. However, until now, we've looked at the concept from a definition standpoint only, and haven't yet considered the 'client' side if you will, or how working with algebraic types should feel like. Of course, this is ends in language features to complement the concept.
+I hope that we've now cleared up what we regard as algebraic type systems. However, until now, we've only looked at the concept from a definition standpoint, and haven't yet considered the 'client' side if you will, or how working with algebraic types should feel like. Of course, this is will end in even more language features to complement the concept.
 
-Fortunately, the list of 'necessary' features is quite short and can be summarized to a single point: _Pattern matching_.
+Fortunately, the list of typical features is quite short and can be summarized to a single point: _Pattern matching_.
 
 ### Pattern Matching
 
+Pattern matching is a language feature which allows destructing a value by matching it against a given set of patterns. These patterns specify a form that a value can take, and in case of a match, they allow extracting variables. The whole process is often implemented as an expression.
+
+It's actually easier than it sounds like. Let's look at a simple example in F#:
+
+```fsharp
+type Shape = Rectangle of width : float * height : float
+           | Circle of radius : float
+let rectInstance = Rectangle(width = 10.0, height = 20.0)
+
+let area = match rectInstance with
+           | Rectangle(width = w; height = h) -> w * h
+           | Circle(radius = r) -> System.Math.PI * r * r
+```
+
+This snippet might contain lots of unfamiliar syntax, but it's actually quite simple and nothing we've not already discussed.
+
+The first block defines a discriminated union named `Shape`, which consists of the variants `Rectangle` and `Circle`. Both variants again consist of fields, which are named as well. It then instantiates a `Rectangle` instance with a width of 10.0 and a height of 20.0.
+
+The actual pattern matching doesn't happen until the second block. The `match` and `with` keywords surround a variable to start a pattern matching expression, and are followed by a set of patterns separated by `|` characters. The patterns then consist of the variants and their fields, which are assigned to the variables `w`, `h` and `r`. Finally, each pattern ends in an expression that determines the result of the expression if the pattern matches.
+
+It may help to take a look at a similar example written in C#, albeit without the pleasure of discriminated unions:
+
+```csharp
+Shape rectInstance = new Rectangle(10, 20);
+
+var area = rectInstance switch
+{
+    Rectangle { Width: var w, Height: var h } => w * h,
+    Circle { Radius: var r } => System.Math.PI * r * r,
+    _ => throw new InvalidOperationException(),	
+};
+
+record Shape;
+record Rectangle(float Width, float Height) : Shape;
+record Circle(float Radius) : Shape;
+```
+
+As you can see, C# made a big step towards algebraic type systems with the introduction of records and pattern matching. However, it's still not there yet, as we cannot define discriminated unions (yet?).
+
+Most pattern matching implementations offer many more features, which we won't explore any further. We're going to keep focued on algebraic type systems, and pattern matching is just a tool to work with them.
+
+However, there is one crucial feature related to discriminated unions and pattern matching we want to take a closer look at.
+
 ### Exhaustive Patterns
 
-Such types are usually unable to contain behavior, but can be written in a highly expressive and terse syntax. 
+If you're coming from an OOP background, you might be kicking and screaming at the thought of knowing possible cases of a type (even if it seems unlikely that you've come this far in that case). We'll get to the relevancy of algebraic type systems in the next part, but there is one big feature that alleviates the issues you might be thinking of: _Exhaustive patterns_.
+
+A language with strong pattern matching support can tell whether you've covered all possible cases or not. This is especially useful when you're working with discriminated unions, as you can be sure that you've handled all cases. If we were to say, introduce a new variant to the `Shape` type, the compiler would tell us if we've forgotten to update our pattern matching code.
+
+```fsharp
+type Shape = Rectangle of width : float * height : float
+           | Circle of radius : float
+           | RightAngledTriangle of width : float * height : float
+let rectInstance = Rectangle(width = 10.0, height = 20.0)
+
+let area = match rectInstance with
+           | Rectangle(width = w; height = h) -> w * h
+           | Circle(radius = r) -> System.Math.PI * r * r
+// warning FS0025: Incomplete pattern matches on this expression.
+// For example, the value 'RightAngledTriangle (_, _)' may indicate a
+// case not covered by the pattern(s)
+```
+
+By relying on exhaustive patterns, you can not only be sure that you've always handled all cases, but you additionally get the opportunity to put your domain model into the center of your type system. If you were to introduce a new variant to the `Shape` or remove an existing one, you'd get an immediate list of all places you need to update by the compiler through warnings.
 
 ## Relevancy for Pragmatists
