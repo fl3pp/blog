@@ -561,6 +561,7 @@ pre {
     /* KeywordPseudo */ .chroma .kp { font-weight: bold; color: $syntax-red }
     /* KeywordReserved */ .chroma .kr { font-weight: bold; color: $syntax-red }
     /* KeywordType */ .chroma .kt { font-weight: bold; color: $syntax-red }
+    /* KeywordType */ .chroma .language-haskell .kt { font-weight: normal; color: $color-black; }
     /* Name */ .chroma .n {  }
     /* NameAttribute */ .chroma .na { color:#1f2328 }
     /* NameBuiltin */ .chroma .nb {  }
