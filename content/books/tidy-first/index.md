@@ -29,7 +29,7 @@ I, personally, am unsure what to make of this theory. It certainly has a point, 
 
 - In my opinion, you sometimes don't get around big refactorings (a Win32 application cannot be simply ported to the web through 'tidyings', and neither can a COBOL application), which the author almost discounts entirely.
 
-- I don't see why 'tidying's shouldn't be tracked. It should surely be possible for developers to improve the code without checking back with the PO or similar every time, but it is likely also not right to disregard their opinion entirely. Especially if it takes a good chunk out of the development resources. Small tasks do pile up.<
+- I don't see why 'tidying's shouldn't be tracked. It should surely be possible for developers to improve the code without checking back with the PO or similar every time, but it is likely also not right to disregard their opinion entirely. Especially if it takes a good chunk out of the development resources. Small tasks do pile up.
 
 - The biggest potential 'options' are, in my opinion, opened with changes at an architectural level. None of the mentioned 'tidyings' provide guidance for such higher-level investments. But I agree with the author in that they are the most risky.
 
