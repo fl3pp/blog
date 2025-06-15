@@ -1,5 +1,5 @@
 ---
-title: 'We We Sleep'
+title: 'Why We Sleep'
 slug: 'why-we-sleep'
 date: '2025-05-22'
 params:
