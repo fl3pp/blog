@@ -1,7 +1,7 @@
 ---
 title: 'Residues'
 slug: 'residues-software-architecture'
-date: '2025-06-02'
+date: '2025-07-02'
 params:
   bookTitle: Residues
   bookSubtitle: Time, Change, and Uncertainty in Software Architecture
@@ -9,7 +9,6 @@ params:
   bookAuthor: Barry O'Reilly
   bookPublishDate: '2024-06-02'
   bookPublisher: Leanpub
-  bookCoverUrl: 'https://d2sofvawe08yqg.cloudfront.net/residuality/s_hero2x?1713352758'
   bookReviewGrade: 4
 ---
 
