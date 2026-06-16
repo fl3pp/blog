@@ -4,6 +4,7 @@
 
    {{ $bookReviews := where .Site.RegularPages "Type" "books" }}
    {{ $regularPosts := where .Site.RegularPages "Type" "posts" }}
+   {{ $coffeePosts := where .Site.RegularPages "Type" "coffee" }}
    {{ $allPosts := collections.Sort (collections.Union $bookReviews $regularPosts) "Date" }}
    {{ $featuredPosts := where $regularPosts ".Params.featured" true }}
 
@@ -38,6 +39,14 @@
             <li>{{ partial "link-single.html" . }}</li>
          {{ end }}
          <li><a href="{{ (site.GetPage "/books").Permalink }}">more...</a></li>
+      </ul>
+
+      <h2>On Coffee</h2>
+      <ul class="link-list">
+         {{ range collections.First 5 $coffeePosts }}
+            <li>{{ partial "link-single.html" . }}</li>
+         {{ end }}
+         <li><a href="{{ (site.GetPage "/coffee").Permalink }}">more...</a></li>
       </ul>
    </div>
 {{ end }}

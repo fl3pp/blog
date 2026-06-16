@@ -617,3 +617,60 @@ pre {
     /* GenericUnderline */ .chroma .gl { text-decoration:underline }
     /* TextWhitespace */ .chroma .w { color:#fff }
 }
+
+.recipe-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    margin: 4rem 0 2rem 0;
+}
+
+.recipe-step {
+    border: $color-dark-alternative solid 2px;
+    border-radius: 12px;
+    padding: 0.5rem;
+    background-color: #fafafa;
+    margin-bottom: 1rem;
+
+    .recipe-step-header {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.7rem;
+
+        .recipe-step-number {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: $color-dark-alternative;
+            min-width: 1.3rem;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .recipe-step-icon {
+            flex-shrink: 0;
+            margin-top: 0.15rem;
+
+            svg {
+                height: 3.5rem;
+                width: 3.5rem;
+                fill: $color-dark-alternative;
+                stroke: $color-dark-alternative;
+                color: $color-dark-alternative;
+            }
+        }
+
+        .recipe-step-content {
+            flex: 1;
+
+            .recipe-step-title {
+                margin: 0 0 0.3rem 0;
+                font-size: 1rem;
+            }
+
+            .recipe-step-description {
+                margin: 0;
+                font-size: 0.95rem;
+            }
+        }
+    }
+}

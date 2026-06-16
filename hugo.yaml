@@ -10,6 +10,7 @@ capitalizeListTitles: false
 permalinks:
   posts: '/:slug/'
   books: '/:slug/'
+  coffee: '/:slug/'
   home: '/'
 markup:
   goldmark:

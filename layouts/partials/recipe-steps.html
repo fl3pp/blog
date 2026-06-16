@@ -1,0 +1,19 @@
+{{ if .Params.steps }}
+<div class="recipe-steps">
+   {{ range $index, $step := .Params.steps }}
+   <div class="recipe-step">
+      <div class="recipe-step-header">
+         <div class="recipe-step-number">{{ add $index 1 }}</div>
+         <div class="recipe-step-icon">
+            {{ $iconPath := printf "/static/icons/%s.svg" $step.icon }}
+            {{ $iconPath | readFile | safeHTML }}
+         </div>
+         <div class="recipe-step-content">
+            <h3 class="recipe-step-title">{{ $step.title }}</h3>
+            <p class="recipe-step-description">{{ $step.description }}</p>
+         </div>
+      </div>
+   </div>
+   {{ end }}
+</div>
+{{ end }}

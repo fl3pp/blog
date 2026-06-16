@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+  <!-- Bean 1 -->
+  <path d="M 6 10 Q 6 8 8 7 Q 10 8 10 10 Q 10 12 8 13 Q 6 12 6 10" fill="currentColor"/>
+  <path d="M 8 7 Q 8 10 8 13" fill="none" stroke="#fafafa" stroke-width="0.8"/>
+
+  <!-- Bean 2 -->
+  <path d="M 12 6 Q 12 4 14 3 Q 16 4 16 6 Q 16 8 14 9 Q 12 8 12 6" fill="currentColor"/>
+  <path d="M 14 3 Q 14 6 14 9" fill="none" stroke="#fafafa" stroke-width="0.8"/>
+
+  <!-- Bean 3 -->
+  <path d="M 8 15 Q 8 13 10 12 Q 12 13 12 15 Q 12 17 10 18 Q 8 17 8 15" fill="currentColor"/>
+  <path d="M 10 12 Q 10 15 10 18" fill="none" stroke="#fafafa" stroke-width="0.8"/>
+
+  <!-- Bean 4 -->
+  <path d="M 14 14 Q 14 12 16 11 Q 18 12 18 14 Q 18 16 16 17 Q 14 16 14 14" fill="currentColor"/>
+  <path d="M 16 11 Q 16 14 16 17" fill="none" stroke="#fafafa" stroke-width="0.8"/>
+</svg>
