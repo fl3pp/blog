@@ -16,17 +16,17 @@ $a-tags-hover: 'a:active, a:hover, a:visited:hover';
 }
 
 html {
-    font-size: 18px;  // Default font size
+    font-size: 17px;  // Default font size
     font-family: 'Noto Serif', serif;
     font-optical-sizing: auto;
 
     #{$a-tags} { color: $color-black; }
     #{$a-tags-hover} { color: $color-dark-alternative; svg { fill: $color-dark-alternative } }
 
-    @media (max-width: 600px) { font-size: 16px; }
-    @media (min-width: 1200px) { font-size: 18px; }
-    @media (min-width: 1800px) { font-size: 21px; }
-    @media (min-width: 2600px) { font-size: 24px; }
+    @media (max-width: 600px) { font-size: 15px; }
+    @media (min-width: 1200px) { font-size: 17px; }
+    @media (min-width: 1800px) { font-size: 20px; }
+    @media (min-width: 2600px) { font-size: 23px; }
 }
 
 body {
@@ -621,8 +621,8 @@ pre {
 .recipe-steps {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 3rem;
-    margin: 4rem 0 2rem 0;
+    gap: 1.5rem;
+    margin: 1rem 0;
 }
 
 .recipe-step {
@@ -630,12 +630,10 @@ pre {
     border-radius: 12px;
     padding: 0.5rem;
     background-color: #fafafa;
-    margin-bottom: 1rem;
 
     .recipe-step-header {
         display: flex;
         align-items: flex-start;
-        gap: 0.7rem;
 
         .recipe-step-number {
             font-size: 1.1rem;

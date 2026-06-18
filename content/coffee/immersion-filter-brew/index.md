@@ -16,9 +16,9 @@ I find that this technique works quite well with a medium to dark roast, where y
 
 {{< recipe-step icon="beans" title="Beans" >}}
 Use **dark** roasted coffee beans, possibly even espresso beans.
+{{< /recipe-step >}}
 
 There is probably an easy way to adjust this recipe for lighter roasts, for example with a higher temperature, but I haven't experimented with that yet.
-{{< /recipe-step >}}
 
 {{< recipe-step icon="scale" title="Weigh" >}}
 Use **60g** of coffee per **1 liter** of water.
@@ -26,26 +26,26 @@ Use **60g** of coffee per **1 liter** of water.
 
 {{< recipe-step icon="grinder" title="Grinding" >}}
 Medium, similar to what you would use for a normal pour-over.
-
-For my Baratza Encore, I set it to 26 out of 40 clicks. Every grinder differs however, so this is something you'll have to experiment with.
 {{< /recipe-step >}}
+
+For my Baratza Encore, I set it to 26 out of 40 clicks. Every grinder differs however, even among the same models, so this is something you'll have to experiment with.
 
 {{< recipe-step icon="boiling-water" title="Boiling" >}}
 Boil water to around **90°C**.
+{{< /recipe-step >}}
 
-Darker beans, for example espresso-grade roasts, could profit from lower temperatures, while lighter ones could profit from higher temperatures. This is something you'll have to experiment with using your own beans and equipment:
+Darker beans, for example espresso-grade roasts, could profit from lower temperatures, while lighter ones could require higher temperatures. This is something you'll have to experiment with using your own beans and equipment:
 - Is it too watery / sour? Try a lower temperature.
 - Is it too bitter? Try a higher temperature.
-{{< /recipe-step >}}
 
 {{< recipe-step icon="flask" title="Brewing" >}}
-Use a big container, similarly to one of a French press. Let it sit for 4 minutes.
+Use a big container, similarly to one of a French press. Let it sit for 4 minutes, then stirr.
+{{< /recipe-step >}}
 
 Do not break the crust that forms on top of the coffee while it brews, just let it sit. After the 4 minutes, you can stir the coffee and if you're able to, even remove the foam (not grounds) that might have formed on top. 
-{{< /recipe-step >}}
 
 {{< recipe-step icon="pour-over" title="Filter" >}}
 Pour the coffee through a filter—for example a Melitta dripper with standard paper filters. This will remove the sediment, but retain a lot (but not all) of the body that you would get from a French press.
+{{< /recipe-step >}}
 
 **Do not** remove the grounds before pouring, for example, by using a plunger or skimming. The grounds are important to catch fine particles that would otherwise clog the filter and stall the entire filtering process.
-{{< /recipe-step >}}

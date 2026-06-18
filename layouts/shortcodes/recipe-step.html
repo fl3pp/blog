@@ -7,15 +7,17 @@
 {{ $title := .Get "title" }}
 {{ $iconPath := printf "/static/icons/%s.svg" $icon }}
 
-<div class="recipe-step">
-  <div class="recipe-step-header">
-    <div class="recipe-step-number">{{ $stepNum }}</div>
-    <div class="recipe-step-icon">
-      {{ $iconPath | readFile | safeHTML }}
-    </div>
-    <div class="recipe-step-content">
-      <h3 class="recipe-step-title">{{ $title }}</h3>
-      <p class="recipe-step-description">{{ .Inner | markdownify }}</p>
+<div class="recipe-steps">
+  <div class="recipe-step">
+    <div class="recipe-step-header">
+      <div class="recipe-step-number">{{ $stepNum }}</div>
+      <div class="recipe-step-icon">
+        {{ $iconPath | readFile | safeHTML }}
+      </div>
+      <div class="recipe-step-content">
+        <h3 class="recipe-step-title">{{ $title }}</h3>
+        <p class="recipe-step-description">{{ .Inner | markdownify }}</p>
+      </div>
     </div>
   </div>
 </div>
