@@ -170,7 +170,7 @@ h1 + p, a:has(h1) + p, h2 + p, a:has(h2) + p, h3 + p, a:has(h3) + p {
 
 p, .highlight {
     margin-top: 0.6rem;
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.8rem;
     background-color: white;
 }
 
@@ -648,23 +648,10 @@ pre {
         .recipe-step-number {
             font-size: 1.1rem;
             font-weight: bold;
+            text-align: right;
             color: $color-dark-alternative;
-            min-width: 1.3rem;
-            text-align: center;
-            flex-shrink: 0;
-        }
-
-        .recipe-step-icon {
-            flex-shrink: 0;
-            margin-top: 0.15rem;
-
-            svg {
-                height: 3.5rem;
-                width: 3.5rem;
-                fill: $color-dark-alternative;
-                stroke: $color-dark-alternative;
-                color: $color-dark-alternative;
-            }
+            min-width: 10pt;
+            margin-right: 0.5rem;
         }
 
         .recipe-step-content {
