@@ -1,12 +1,16 @@
 {{ define "main" }}
 
    {{ .Content }}
+   <p>
+      <b>Hey there!</b>
+      This is my private corner of the internet. I use it to irregularly post excerpts of anything that I find interesting, useful and worth sharing both privately and professionally.
+   </p>
 
+   {{ $softwarePosts := where .Site.RegularPages "Type" "software" }}
    {{ $bookReviews := where .Site.RegularPages "Type" "books" }}
-   {{ $regularPosts := where .Site.RegularPages "Type" "posts" }}
-   {{ $coffeePosts := where .Site.RegularPages "Type" "coffee" }}
-   {{ $allPosts := collections.Sort (collections.Union $bookReviews $regularPosts) "Date" }}
-   {{ $featuredPosts := where $regularPosts ".Params.featured" true }}
+   {{ $guidePosts := where .Site.RegularPages "Type" "random-guides" }}
+   {{ $allPosts := collections.Sort (collections.Union $bookReviews (collections.Union $softwarePosts $guidePosts)) "Date" }}
+   {{ $featuredPosts := where $allPosts ".Params.featured" true }}
 
    <div class="link-lists">
 
@@ -19,21 +23,29 @@
          </ul>
       {{ end }}
 
-      <h2>Latest</h2>
-      <ul class="link-list">
-         {{ range collections.First 10 $regularPosts }}
-            <li>{{ partial "link-single.html" . }}</li>
-         {{ end }}
-         <li><a href="{{ (site.GetPage "/posts").Permalink }}">more...</a></li>
-      </ul>
+      <a href="{{ (site.GetPage "/software").Permalink }}" style="text-decoration: none;">
+         <h2>Software & Engineering</h2>
+      </a>
 
-      <h2>Tags</h2>
-      {{ range $term, $taxonomy := .Site.Taxonomies.tags}}
-         {{ $termPage := site.GetPage $term }}
-         <a class="tag-link" href="{{ $termPage.Permalink }}"><b><code>#</code>{{ $termPage.LinkTitle }}</b><span class="lighter">({{ .Count  }})</span></a>
+      {{ with .Site.GetPage "/software" }}
+         {{ .Content }}
       {{ end }}
 
-      <h2>Book Reviews</h2>
+      <ul class="link-list">
+         {{ range collections.First 10 $softwarePosts }}
+            <li>{{ partial "link-single.html" . }}</li>
+         {{ end }}
+         <li><a href="{{ (site.GetPage "/software").Permalink }}">more...</a></li>
+      </ul>
+
+      <a href="{{ (site.GetPage "/books").Permalink }}" style="text-decoration: none;">
+         <h2>Book Reviews</h2>
+      </a>
+
+      {{ with .Site.GetPage "/books" }}
+         {{ .Content }}
+      {{ end }}
+
       <ul class="link-list">
          {{ range collections.First 5 $bookReviews }}
             <li>{{ partial "link-single.html" . }}</li>
@@ -41,12 +53,19 @@
          <li><a href="{{ (site.GetPage "/books").Permalink }}">more...</a></li>
       </ul>
 
-      <h2>On Coffee</h2>
+      <a href="{{ (site.GetPage "/random-guides").Permalink }}" style="text-decoration: none;">
+         <h2>Random Guides</h2>
+      </a>
+
+      {{ with .Site.GetPage "/random-guides" }}
+         {{ .Content }}
+      {{ end }}
+
       <ul class="link-list">
-         {{ range collections.First 5 $coffeePosts }}
+         {{ range collections.First 5 $guidePosts }}
             <li>{{ partial "link-single.html" . }}</li>
          {{ end }}
-         <li><a href="{{ (site.GetPage "/coffee").Permalink }}">more...</a></li>
+         <li><a href="{{ (site.GetPage "/random-guides").Permalink }}">more...</a></li>
       </ul>
    </div>
 {{ end }}

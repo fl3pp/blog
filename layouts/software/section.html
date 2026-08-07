@@ -1,0 +1,30 @@
+{{ define "main" }}
+   <h1>{{ .Title }}</h1>
+   {{ .Content }}
+
+   <div class="link-lists">
+      {{ $sectionPages := .RegularPagesRecursive }}
+
+      {{ $tags := slice }}
+      {{ range $sectionPages }}
+         {{ range .GetTerms "tags" }}
+            {{ $tags = $tags | append . }}
+         {{ end }}
+      {{ end }}
+      {{ $tags = $tags | uniq }}
+
+      {{ range $tag := sort $tags "Title" "asc" }}
+         {{ $matchingPages := intersect $tag.Pages $sectionPages }}
+         
+         {{ if $matchingPages }}
+            <h2 id="{{ $tag.Title | urlize }}">{{ $tag.Title }}</h2>
+
+            <ul class="link-list">
+               {{ range $matchingPages }}
+                  <li>{{ partial "link-single.html" . }}</li>
+               {{ end }}
+            </ul>
+         {{ end }}
+      {{ end }}
+   </div>
+{{ end }}
