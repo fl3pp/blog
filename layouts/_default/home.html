@@ -6,9 +6,9 @@
       This is my private corner of the internet. I use it to irregularly post excerpts of anything that I find interesting, useful and worth sharing both privately and professionally.
    </p>
 
-   {{ $softwarePosts := where .Site.RegularPages "Type" "software" }}
-   {{ $bookReviews := where .Site.RegularPages "Type" "books" }}
-   {{ $guidePosts := where .Site.RegularPages "Type" "random-guides" }}
+   {{ $softwarePosts := where .Site.RegularPages "Section" "software" }}
+   {{ $bookReviews := where .Site.RegularPages "Section" "books" }}
+   {{ $guidePosts := where .Site.RegularPages "Section" "random-guides" }}
    {{ $allPosts := collections.Sort (collections.Union $bookReviews (collections.Union $softwarePosts $guidePosts)) "Date" }}
    {{ $featuredPosts := where $allPosts ".Params.featured" true }}
 
