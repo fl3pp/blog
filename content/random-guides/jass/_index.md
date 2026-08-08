@@ -253,6 +253,77 @@ You don't even have to finish a match: Once you reach the required amount of poi
 
 ### Summarized Process
 
-## Basic Strategies
+As a pseudo-code algorithm, the process of a Jass game can be summarized (roughly) as follows:
 
-Card Counting
+```
+procedure play_game(table, deck, target_points)
+    team_1.members = [table.players[0], table.players[2]]
+    team_2.members = [table.players[1], table.players[3]]
+
+    while team_1.points < target_points and team_2.points < target_points do
+        (team_1_points, team_2_points) += play_match(table, deck)
+    end while
+
+procedure play_match(table, deck)
+    dealer = if (dealer is null) then choose_random_player(table.players)
+        else table.next_player_counter_clockwise(dealer)
+    
+    dealer.shuffle(deck)
+
+    table.next_player_counter_clockwise(dealer).cut(deck)
+
+    dealer.deal_all_cards(deck, table.players, batch=3)
+
+    trump_suite = table.next_player_counter_clockwise(dealer).choose_trump_suite_or_pass()
+    if trump_suite is null then
+        trump_sutie = table.companion_of(dealer).choose_trump_suite()
+
+    team_1_cards = []
+    team_2_cards = []
+    
+    for i = 1 to 9 do
+        stab = table.new_stab()
+        first_player = stab.winner_of_previous_stab_or_forehand()
+
+        first_player.play_card(stab, trump_suite)
+        stab_suite = stab.played_cards[0].suite
+
+        for player in table.players_counter_clockwise(first_player) do
+            player.play_card(stab, stab_suite, trump_suite)
+        
+        winning_card = determine_winner(stab, stab_suite, trump_suite)
+        winner = stab.player_of(winning_card)
+
+        if winner in table.team_1 then
+            team_1_cards.append(stab.played_cards)
+        else
+            team_2_cards.append(stab.played_cards)
+        
+    let team_1_points = sum(card_points(card, trump_suite) for card in team_1_cards)
+    let team_2_points = sum(card_points(card, trump_suite) for card in team_2_cards)
+
+    return (team_1_points, team_2_points)
+    
+function determine_winner(stab, stab_suite, trump_suite)
+    if any card in stab.played_cards is of trump_suite then
+        return highest_card_of_suite(stab.played_cards, trump_suite)
+    else if trump_suite is "buttom-up" then
+        return lowest_card_of_suite(stab.played_cards, stab_suite)
+    else
+        return highest_card_of_suite(stab.played_cards, stab_suite)
+
+function card_points(card, trump_suite)
+    if card.suite is trump_suite and card.rank is "jack" then
+        return 20
+    else if card.suite is trump_suite and card.rank is "9" then
+        return 14
+    else if card.suite is "top-down" or "bottom-up" and card.rank is "8" then
+        return 8
+    else
+        if card.rank is "ace" then return 11
+        else if card.rank is "10" then return 10
+        else if card.rank is "king" then return 4
+        else if card.rank is "queen" then return 3
+        else if card.rank is "jack" then return 2
+        else return 0
+```
