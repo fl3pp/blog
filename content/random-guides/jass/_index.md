@@ -39,15 +39,15 @@ In the following, we will assume a French-suited deck, which corresponds to the 
 
 ### Trick-Taking Mechanics
 
-As in most trick-taking games each player is dealt a hand of cards at the beginning of a play. Next, the game proceeds in rounds or "tricks", where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a "Stich", literally translated to "stab".
+As in most trick-taking mechanics, a _game_ ("Partie") is played in multiple rounds of _matches_ ("Spiel"), for which each player is dealt a hand of cards. Next, a match proceeds in rounds or "tricks", where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a "Stich", literally translated to "stab".
 
-The rules of evaluating the card winner contain the most complexity for beginners, so I will introduce them to you step by step in the following sections.
+The rules of evaluating the winning card of a stab consist the most complexity for beginners, so I will introduce them step by step.
 
-The goal is to accumulate as many points as possible by winning cards through stabs. In the end, the cards are summed up and assigned points according to their rank and suite (see [Point System](#point-system) below). The player, or in Schieber the team, with the most points at the end wins the game.
+The goal is to accumulate as many points as possible by winning cards in stabs. In the of a match, the cards are summed up and assigned points according to their rank and suite (see [Point System](#point-system) below). The player, or in Schieber the team, who reaches a pre-determined amount of points first wins the game.
 
 ### Distributing Cards
 
-At the beginning of a game, a dealer is chosen. Since Jass is played in counter-clockwise order with the saying "der Schwinte entlang" (literally "along the slap"), the player sitting right of the assumingly right-handed dealer is called the "forehand" ("Vorhand"), and the player sitting on the left is called the "backhand" ("Rückhand").
+At the beginning of a match, a dealer is chosen. Since Jass is played in counter-clockwise order with the saying "der Schwinte entlang" (literally "along the slap"), the player sitting right of the assumingly right-handed dealer is called the "forehand" ("Vorhand"), and the player sitting on the left is called the "backhand" ("Rückhand").
 
 There is one special oddity aimed at preventing the dealer from cheating: After the dealer shuffles the deck thoroughly, he/she places the deck in front of the player on their left (the backhand) to "cut" the deck (in German "Abheben"): Literally lift at least three cards off the top and place them next to the remaining deck. The dealer will then pick the decks up in reverse order to have a final mix-up from a player of the opposite team.
 
@@ -88,13 +88,168 @@ Here are a few examples of stabs, where the first card and winner are written ab
     {{<playing-card suite="heart" rank="ace">}}
 {{</playing-card-row>}}
 
-
-The suite obligation rule makes for an interesting strategic element: In the beginning it is easy to match the suite of the stab, but as the game progresses and cards dwindle, it gets increasingly more difficult to match the stab suite. Being able to choose the suite of the stab is therefore a powerful advantage because you can force opponents to lose valuable cards against lower ranks, particularly towards the end of a play.
-
+The suite obligation rule makes for an interesting strategic element: In the beginning it is easy to match the suite of the stab, but as the match progresses and cards dwindle, it gets increasingly more difficult to match the stab suite. Being able to choose the suite of the stab is therefore a powerful advantage because you can force opponents to lose valuable cards against lower ranks, particularly towards the end of a play.
 
 ### Trump
 
+There is another element to the game that adds a twist: The trump suite.
+
+In the Schieber and most other variants, a match (meaning a round of 9 stabs) has a dedicated _trump suite_, which wins over all other suites regardless of the card rank or the suite of the stab.
+
+A trump card can be played by any players on any turn, even by the first player of the stab (which would make the stab suite the same as the trump suite). If a player plays a trump card into a stab with a different suite, it is called _stabbing in_ ("einstechen").
+
+The following players are not required to also play a trump card (unless trump suite = stab suite), but will lose the stab if they do not. Players are however _not allowed_ to play a _lower_ trump card if they can avoid it ("under trumping" / "untertrumpfen" is not allowed).
+
+{{<playing-card-row>}}
+    {{<playing-card suite="spade" rank="10">}}
+    {{<playing-card suite="spade" rank="jack" captionAbove="first card">}}
+    {{<playing-card suite="spade" rank="queen">}}
+    {{<playing-card suite="heart" rank="ace" caption="winner" captionAbove="trump">}}
+{{</playing-card-row>}}
+
+---
+
+{{<playing-card-row>}}
+    {{<playing-card suite="diamond" rank="jack" caption="winner" captionAbove="trump">}}
+    {{<playing-card suite="diamond" rank="10" captionAbove="first card & trump">}}
+    {{<playing-card suite="spade" rank="king">}}
+    {{<playing-card suite="diamond" rank="8" captionAbove="trump">}}
+{{</playing-card-row>}}
+
+
+Interestingly the _trump jack_ and the _trump nine_ (also "Näll") are more powerful than the others, which makes them the most valuable cards in the game. This results in a different ranking of the trump suite than for non-trump suites:
+
+{{<playing-card-row>}}
+    {{<playing-card suite="club" rank="jack" caption="1">}}
+    {{<playing-card suite="club" rank="9" caption="2">}}
+    {{<playing-card suite="club" rank="ace" caption="3">}}
+    {{<playing-card suite="club" rank="king" caption="4">}}
+    {{<playing-card suite="club" rank="queen" caption="5">}}
+    {{<playing-card suite="club" rank="10" caption="6">}}
+    {{<playing-card suite="club" rank="8" caption="7">}}
+    {{<playing-card suite="club" rank="7" caption="8">}}
+    {{<playing-card suite="club" rank="6" caption="9">}}
+{{</playing-card-row>}}
+
+Some example stabs where these new rules come into play:
+
+{{<playing-card-row>}}
+    {{<playing-card suite="heart" rank="ace" captionAbove="trump">}}
+    {{<playing-card suite="heart" rank="king" captionAbove="trump">}}
+    {{<playing-card suite="heart" rank="7" captionAbove="trump">}}
+    {{<playing-card suite="heart" rank="jack" caption="winner" captionAbove="trump">}}
+{{</playing-card-row>}}
+
+---
+
+{{<playing-card-row>}}
+    {{<playing-card suite="spade" rank="ace" captionAbove="trump">}}
+    {{<playing-card suite="club" rank="ace">}}
+    {{<playing-card suite="club" rank="king" captionAbove="first card">}}
+    {{<playing-card suite="spade" rank="9" caption="winner" captionAbove="trump">}}
+{{</playing-card-row>}}
+
+---
+
+{{<playing-card-row>}}
+    {{<playing-card suite="diamond" rank="king" captionAbove="first card">}}
+    {{<playing-card suite="club" rank="6" captionAbove="trump" caption="winner">}}
+    {{<playing-card suite="diamond" rank="queen">}}
+    {{<playing-card suite="diamond" rank="ace" >}}
+{{</playing-card-row>}}
+
+As the trump cards are the most valuable ones, it is important to determine when to play them wisely. It is also advisable to keep track of the trump cards that have already been played, as you can easily lose high scoring cards to a trump card.
+
+Besides the four suites, there are two additional trump options that can be chosen:
+
+- Top-Down (also "Obenabe"), where there is no basically trump suite and the cards are ranked from ace down to 6 in all suites.
+- Bottom-Up (also "Undenufe"), where the cards are ranked in reverse order from 6 up to ace in all suites. However: Their points values remain and are not reversed!
+
+### Team Play & Trump Determination
+
+How a trump suite is determined depends heavily on the variant of Jass being played. Since we are just looking at the Schieber here, we solely will focus on the rules for this variant. It is interlinked with the team play which we also haven't discussed yet in more detail, which we'll do now as well.
+
+Although each stab can be won by a single player, the game is played by two teams of two players. The players are not allowed to tell each other which cards they have, or even if they have generally good or bad cards. This is considered cheating and would undermine some mechanics.
+
+To make direct communication more difficult, players of a team are required sit opposite of each other, or around a table, player from different teams alternate.
+
+<table style="margin: 0 auto; width: auto; display: table; border-collapse: unset; text-align: center">
+    <tr style="background: none"><td></td><td>Team 1</td><td></td></tr>
+    <tr style="background: none"><td>Team 2</td><td><b>Table</b></td><td>Team 2</td></tr>
+    <tr style="background: none"><td></td><td>Team 1</td><td></td></tr>
+</table>
+
+The Schieber Jass makes use of this non-communication rule in a clever way: The forehand is given the opportunity to choose the trump suite after looking at his/her cards, but is also allowed to _pass_ ("push" or "schieben") the choice to his companion on the opposite side of the table. Once the choice has been passed on, the companion must choose one of the six trump options.
+
+There isn no fool proof strategy here: Look if you have a sufficiently strong suite on your hands, and if not, pass the choice to your companion and hope that he/she has a better hand. 
+
 ### Point System
+
+After all stabs of a match have been played, the cards are collected and awarded points according to their rank and suite. The chosen trump has significance here:
+
+**Non-Trump Suite** given that another suite is chosen as trump:
+
+{{<playing-card-row>}}
+    {{<playing-card suite="heart" rank="ace" caption="`11P`">}}
+    {{<playing-card suite="heart" rank="king" caption="`4P`">}}
+    {{<playing-card suite="heart" rank="queen" caption="`3P`">}}
+    {{<playing-card suite="heart" rank="jack" caption="`2P`">}}
+    {{<playing-card suite="heart" rank="10" caption="`10P`">}}
+    {{<playing-card suite="heart" rank="9" caption="`0P`">}}
+    {{<playing-card suite="heart" rank="8" caption="`0P`">}}
+    {{<playing-card suite="heart" rank="7" caption="`0P`">}}
+    {{<playing-card suite="heart" rank="6" caption="`0P`">}}
+{{</playing-card-row>}}
+
+The interesting part here is that the 10 is worth more points than the king, queen, and jack combined, but is still ranked lower in terms of winning a stab. So a 10 is usually hard to get home, but also a good hunting target for opponents.
+
+**Trump Suite:**
+
+{{<playing-card-row>}}
+    {{<playing-card suite="club" rank="jack" caption="`20P`">}}
+    {{<playing-card suite="club" rank="9" caption="`14P`">}}
+    {{<playing-card suite="club" rank="ace" caption="`11P`">}}
+    {{<playing-card suite="club" rank="king" caption="`4P`">}}
+    {{<playing-card suite="club" rank="queen" caption="`3P`">}}
+    {{<playing-card suite="club" rank="10" caption="`10P`">}}
+    {{<playing-card suite="club" rank="8" caption="`0P`">}}
+    {{<playing-card suite="club" rank="7" caption="`0P`">}}
+    {{<playing-card suite="club" rank="6" caption="`0P`">}}
+{{</playing-card-row>}}
+
+Notice how the trump jack and nine are worth significantly more points than the other cards, meaning that they are not only strong in winning stabs, but also in scoring points.
+
+**Top-Down / Buttom-Up** ("Obenabe" / "Undenufe") for all suites:
+
+{{<playing-card-row>}}
+    {{<playing-card suite="club" rank="ace" caption="`11P`">}}
+    {{<playing-card suite="club" rank="king" caption="`4P`">}}
+    {{<playing-card suite="club" rank="queen" caption="`3P`">}}
+    {{<playing-card suite="club" rank="jack" caption="`2P`">}}
+    {{<playing-card suite="club" rank="10" caption="`10P`">}}
+    {{<playing-card suite="club" rank="9" caption="`0P`">}}
+    {{<playing-card suite="club" rank="8" caption="`8P`">}}
+    {{<playing-card suite="club" rank="7" caption="`0P`">}}
+    {{<playing-card suite="club" rank="6" caption="`0P`">}}
+{{</playing-card-row>}}
+
+Since there are no trump cards in these two variants, the remaining points are distributed among the 8, which now counts as much as its face value.
+
+**Last Stab**
+
+The team that wins the last stab of a match is awarded an additional 5 points.
+
+**Control**
+
+The total amount of points in a match is always `157`, regardless of the chosen trump suite. This can be used as a cross-check after all cards have been counted.
+
+### Thanking & Winning the Game
+
+The players determine before the game starts how many points are required to win the game. Usually, a game is played somewhere from `1000` to `2500` in `500` increments.
+
+It is customary to end the game by thanking the losing team for the game through a handshake.
+
+You don't even have to finish a match: Once you reach the required amount of points, you can stop the game early and declare victory by thanking the opponents. This may be important in close calls. If you however thank _too early_, you will lose the game even if you have more points in total, so be careful.
 
 ### Summarized Process
 
