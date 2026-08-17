@@ -96,7 +96,7 @@ There is another element to the game that adds a twist: The trump suit.
 
 In the Schieber and most other variants, a match (meaning a round of 9 tricks) has a dedicated _trump suit_, which wins over all other suits regardless of the card rank or the suit of the trick.
 
-A trump card can be played by any players on any turn, even by the first player of the trick (which would make the trick suit the same as the trump suit). If a player plays a trump card into a trick with a different suit, it is called _stabbing in_ ("einstechen").
+A trump card can be played by any players on any turn, even by the first player of the trick (which would make the trick suit the same as the trump suit). If a player plays a trump card into a trick with a different suit, it is called _stabbing in_ ("einstechen") and will cause non-trump cards to lose the trick.
 
 The following players are not required to also play a trump card (unless trump suit = trick suit), but will lose the trick if they do not. Players however _must not_ play a lower trump card ("under trumping" / "untertrumpfen"), unless they have only trump cards left in their hand.
 
@@ -233,7 +233,7 @@ Notice how the trump jack and nine are worth significantly more points than the 
     {{<playing-card suit="diamond" rank="6" caption="`0P`">}}
 {{</playing-card-row>}}
 
-Since there are no trump cards in these two variants, the remaining points are distributed among the 8, which now counts as much as its face value.
+Since there are no trump cards in these two variants, the remaining points are distributed among the 8, which now counts as much as its face value and keeps the total amount of points in a deck at `152` (just like in a game with trump cards).
 
 **Bottom-Up** ("Undenufe") for all suits:
 
