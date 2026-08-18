@@ -9,9 +9,13 @@ Jass is a traditional card game that is widely played in Switzerland. It is a tr
 
 ## Cultural Significance
 
-Switzerland essentially consists of a mix of different cultures and influences, and has been established as a country not for its shared ancestry or language, but rather for political will and shared values. It is therefore even more interesting that there is a card game played throughout the country, with the same rules and same name (even if with various cards types: some influenced by German, others by French card games).
+Switzerland essentially consists of a mix of different cultures and influences, and has been established as a country not for its shared ancestry or language, but rather for political will and shared values. It is therefore interesting that there is a card game played throughout the country, with the same rules and same name.
 
-Jass has thus a cultural significance beyond the game itself, and is a tradition I find worth keeping alive.
+Even more interesting is that the game has obvious influences from all over Europe: The German-speaking part of Switzerland uses a deck aligned with decks used in Germany, whereas the French- and Italian-speaking parts use decks from France and Italy. The name "Jass", and also some key elements of the game, derive from the Dutch game 'Jas' (meaning "Bube" in German or "Jack" in English), though both have been adapted since into a unique Swiss version.
+
+I thus find Jass to be a great analogy for Switzerland itself: A country that has been established from a variety of different cultures, which have kept their unique characteristics (be it the spoken languages or used card decks) but also have since started to form a new shared identity.
+
+To me, the game has cultural significance beyond the game itself, and is a tradition I find worth keeping alive.
 
 ## Basic Rules
 
