@@ -9,9 +9,9 @@ Jass is a traditional card game that is widely played in Switzerland. It is a tr
 
 ## Cultural Significance
 
-Switzerland essentially consists of a mix of different cultures and influences, and has been established as a country not for its shared ancestry or language, but rather for political will and shared values. It is therefore interesting that there is a card game played throughout the country, with the same rules and same name.
+Switzerland consists of a mix of different cultures and influences, and has been established as a country not for its shared ancestry or language, but rather for political will and shared values. It is therefore interesting that there is a card game played throughout the country, with the same rules and same name.
 
-Even more interesting is that the game has obvious influences from all over Europe: The German-speaking part of Switzerland uses a deck aligned with decks used in Germany, whereas the French- and Italian-speaking parts use decks from France and Italy. The name "Jass", and also some key elements of the game, derive from the Dutch game 'Jas' (meaning "Bube" in German or "Jack" in English), though both have been adapted since into a unique Swiss version.
+Even more interesting is that the game has obvious influences from all over Europe: The German-speaking part of Switzerland uses a custom Swiss-german deck similar to decks used in Germany, whereas the French-speaking parts use decks from France and the Italian-Swiss also have a traditional deck derived from an Italian one. The name 'Jass', and also the original base version of the game, derive from the Dutch game 'Jas', meaning 'Farmer' ('Bauer' in German). It has since been significantly adapted into a uniquely Swiss version.
 
 I thus find Jass to be a great analogy for Switzerland itself: A country that has been established from a variety of different cultures, which have kept their unique characteristics (be it the spoken languages or used card decks) but also have since started to form a new shared identity.
 
@@ -19,7 +19,7 @@ To me, the game has cultural significance beyond the game itself, and is a tradi
 
 ## Basic Rules
 
-There are many variations of Jass, so I will focus on the most common one, called "Schieber" (literally "pusher"), and will build an understanding from the foundation up so that you do not need to know the rules of similar trick-taking games as a prerequisite. The guide may therefore be a bit on the longer side as a trade-off for being more beginner-friendly.
+There are many variations of Jass, so I will focus on the most common one, called 'Schieber' (literally 'pusher'), and will build an understanding from the foundation up so that you do not need to know the rules of similar trick-taking games as a prerequisite. The guide may therefore be a bit on the longer side as a trade-off for being more beginner-friendly.
 
 I will try to follow the [official Jass rulebook 'Puur, Näll, As' by Göpf Egg and Albert Hagenbucher](https://shop.jassverzeichnis.ch/products/Offizielles-Jassreglement-nach-G%C3%B6pf-Egg-p214771111), but do not claim to be infallible. Please reach out to me if you find mistakes of any kind.
 
@@ -43,17 +43,17 @@ In the following, we will assume a French-suited deck, which corresponds to the 
 
 ### Trick-Taking Mechanics
 
-As in most trick-taking mechanics, a _game_ ("Partie") is played in multiple rounds of _matches_ ("Spiel"), for which each player is dealt a hand of cards. Next, a match proceeds in rounds or _tricks_, where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a "Stich", literally translated to "stab".
+As in most trick-taking mechanics, a _game_ ('Partie') is played in multiple _deals_ ('Spiel'), for which each player is dealt a hand of cards. Next, a deal proceeds in nine _tricks_, where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a 'Stich'.
 
 The rules of evaluating the winning card of a trick contain the most complexity for beginners, so I will introduce them step by step.
 
-The goal is to accumulate as many points as possible by winning cards in tricks. After a match, the cards are summed up and assigned points according to their rank and suit (see [Point System](#point-system) below). The player, or in Schieber the team, who reaches a pre-determined amount of points first wins the game.
+The goal is to accumulate as many points as possible by winning cards in tricks. After a deal, the cards are summed up and assigned points according to their rank and suit (see [Point System](#point-system) below). The player, or in Schieber the team, who reaches a pre-determined amount of points first wins the game.
 
 ### Distributing Cards
 
-At the beginning of a match, a dealer is chosen. Since Jass is played in counter-clockwise order with the saying "der Ohrfeige entlang" (literally "along the slap"), the player sitting right of the assumingly right-handed dealer is called the "forehand" ("Vorhand"), and the player sitting on the left is called the "backhand" ("Rückhand").
+At the beginning of a deal, a dealer is chosen. Since Jass is played in counter-clockwise order with the saying 'der Ohrfeige entlang' (literally 'along the slap'), the player sitting right of the presumably right-handed dealer is called the 'forehand' ('Vorhand'), and the player sitting on the left is called the 'backhand' ('Rückhand').
 
-There is one special oddity aimed at preventing the dealer from cheating: After the dealer shuffles the deck thoroughly, he/she places the deck in front of the player on their left (the backhand) to "cut" the deck (in German "Abheben"): Literally lift at least three cards off the top and place them next to the remaining deck. The dealer will then pick the decks up in reverse order to have a final mix-up from a player of the opposite team.
+There is one special oddity aimed at preventing the dealer from cheating: After the dealer shuffles the deck thoroughly, he/she places the deck in front of the player on their left (the backhand) to 'cut' the deck (in German 'Abheben'): Literally lift at least three cards off the top and place them next to the remaining deck. The dealer will then pick the decks up in reverse order to have a final mix-up from a player of the opposite team.
 
 Only then will the cards be dealt to the players, again in counter-clockwise fashion, starting with the forehand and ending with the dealer. The cards are dealt in 3 rounds of 3 cards, so that each player ends up with a hand of 9 cards.
 
@@ -61,9 +61,9 @@ In the next play, the dealer role will be passed on to the next one in counter-c
 
 ### Trick Suit
 
-The first player to lay down a card is the winner of the previous trick, or initially the forehand. He will determine the suit of the trick, which is the suit of the card he/she played.
+The player who wins a trick leads the next trick. For the first trick, the forehand leads. He determines the suit of the trick, which is the suit of the card he/she played.
 
-All other players are obliged (called "Farbzwang") to play a card of the same suit if they have one (except for trump cards, which we'll deal with in the next section). Within a suit the normal ranking of card applies, so that e.g., a 10 of hearts will beat a 9 of hearts but lose to a queen of hearts. If a player is unable to match the suit of the trick, he/she may play any other card, which will however lose to all cards of the trick suit.
+All other players are obliged (called 'Farbzwang') to play a card of the same suit if they have one (except for trump cards, which we'll deal with in the next section). Within a suit the normal ranking of cards applies, so that e.g., a 10 of hearts will beat a 9 of hearts but lose to a queen of hearts. If a player is unable to match the suit of the trick, he/she may play any other card, which will however lose to all cards of the trick suit.
 
 Here are a few examples of tricks, where the first card and winner are written above and below the cards:
 
@@ -92,17 +92,17 @@ Here are a few examples of tricks, where the first card and winner are written a
     {{<playing-card suit="heart" rank="ace">}}
 {{</playing-card-row>}}
 
-The suit obligation rule makes for an interesting strategic element: In the beginning it is easy to match the suit of the trick, but as the match progresses and cards dwindle, it gets increasingly more difficult to match the trick suit. Being able to choose the suit of the trick is therefore a powerful advantage because you can force opponents to lose valuable cards against lower ranks, particularly towards the end of a play.
+The suit obligation rule makes for an interesting strategic element: In the beginning it is easy to match the suit of the trick, but as the deal progresses and cards dwindle, it gets increasingly more difficult to match the trick suit. Being able to choose the suit of the trick is therefore a powerful advantage because you may be able to force opponents to lose valuable cards against lower ranks, particularly towards the end of a play.
 
 ### Trump
 
 There is another element to the game that adds a twist: The trump suit.
 
-In the Schieber and most other variants, a match (meaning a round of 9 tricks) has a dedicated _trump suit_, which wins over all other suits regardless of the card rank or the suit of the trick.
+In the Schieber and most other variants, a deal (meaning a round of 9 tricks) has a dedicated _trump suit_, which wins over all other suits regardless of the card rank or the suit of the trick.
 
-A trump card can be played by any players on any turn, even by the first player of the trick (which would make the trick suit the same as the trump suit). If a player plays a trump card into a trick with a different suit, it is called _stabbing in_ ("einstechen") and will cause non-trump cards to lose the trick.
+A trump card can be played by any players on any turn, even by the first player of the trick (which would make the trick suit the same as the trump suit). If a player plays a trump card into a trick with a different suit, it is called _stabbing in_ ('einstechen') and will cause non-trump cards to lose the trick.
 
-The following players are not required to also play a trump card (unless trump suit = trick suit), but will lose the trick if they do not. Players however _must not_ play a lower trump card ("under trumping" / "untertrumpfen"), unless they have only trump cards left in their hand.
+The following players are not required to also play a trump card (unless trump suit = trick suit), but will lose the trick if they do not. Players however _must not_ play a lower trump card ('under trumping' / 'untertrumpfen'), unless they have only trump cards left in their hand or the trump suit is the same as the trick suit.
 
 {{<playing-card-row>}}
     {{<playing-card suit="spade" rank="10">}}
@@ -121,7 +121,7 @@ The following players are not required to also play a trump card (unless trump s
 {{</playing-card-row>}}
 
 
-Interestingly the _trump jack_ and the _trump nine_ (also "Näll") are more powerful than the others, which makes them the most valuable cards in the game. This results in a different ranking of the trump suit than for non-trump suits:
+Interestingly the _trump jack_ and the _trump nine_ (also 'Näll', from the Dutch 'nel' meaning nine) are more powerful than the others, which makes them the most valuable cards in the game. This results in a different ranking of the trump suit than for non-trump suits:
 
 {{<playing-card-row>}}
     {{<playing-card suit="club" rank="jack" caption="1">}}
@@ -166,8 +166,8 @@ As the trump cards are the most valuable ones, it is important to determine when
 
 Besides the four suits, there are two additional trump options that can be chosen:
 
-- Top-Down (also "Obenabe"), where there is basically no trump suit and the cards are ranked from ace down to 6 in all suits.
-- Bottom-Up (also "Undenufe"), where the cards are ranked in reverse order from 6 up to ace in all suits. While the 6 and ace also swap their point values, the other rank point values remain and are not reversed! So, e.g., the 7 is still worth 0 points, but is the second-highest card in the game.
+- Top-Down (also 'Obenabe'), where there is basically no trump suit and the cards are ranked from ace down to 6 in all suits.
+- Bottom-Up (also 'Undenufe'), where the cards are ranked in reverse order from 6 up to ace in all suits. While the 6 and ace also swap their point values, the other rank point values remain and are not reversed! So, e.g., the 7 is still worth 0 points, but is the second-highest card in the game.
 
 ### Team Play & Trump Determination
 
@@ -175,7 +175,7 @@ How a trump suit is determined depends heavily on the variant of Jass being play
 
 Although each trick can be won by a single player, the game is played by two teams of two players. The players are not allowed to tell each other which cards they have, or even if they have generally good or bad cards. This is considered cheating and would undermine some mechanics.
 
-To make direct communication more difficult, players of a team are required to sit opposite of each other, or around a table, player from different teams alternate.
+To make direct communication more difficult, players of a team are required to sit opposite of each other, or around a table, players from different teams alternate.
 
 <table style="margin: 0 auto; width: auto; display: table; border-collapse: unset; text-align: center">
     <tr style="background: none"><td></td><td>Team 1</td><td></td></tr>
@@ -183,13 +183,13 @@ To make direct communication more difficult, players of a team are required to s
     <tr style="background: none"><td></td><td>Team 1</td><td></td></tr>
 </table>
 
-The Schieber Jass makes use of this non-communication rule in a clever way: The forehand is given the opportunity to choose the trump suit after looking at his/her cards, but is also allowed to _pass_ ("push" or "schieben") the choice to his companion on the opposite side of the table. Once the choice has been passed on, the companion must choose one of the six trump options.
+The Schieber Jass makes use of this non-communication rule in a clever way: The forehand is given the opportunity to choose the trump suit after looking at his/her cards, but is also allowed to _pass_ ('push' or 'schieben') the choice to his companion on the opposite side of the table. Once the choice has been passed on, the companion must choose one of the six trump options.
 
 There is no foolproof strategy here: Look if you have a sufficiently strong suit on your hands, and if not, pass the choice to your companion and hope that he/she has a better hand. 
 
 ### Point System
 
-After all tricks of a match have been played, the cards are collected and awarded points according to their rank and suit. The chosen trump has significance here:
+After all tricks of a deal have been played, the cards are collected and awarded points according to their rank and suit. The chosen trump has significance here:
 
 **Non-Trump suits** given that another suit is chosen as trump:
 
@@ -223,7 +223,7 @@ The interesting part here is that the 10 is worth more points than a king, queen
 
 Notice how the trump jack and nine are worth significantly more points than the other cards, meaning that they are not only strong in winning tricks, but also in scoring points.
 
-**Top-Down** ("Obenabe") for all suits:
+**Top-Down** ('Obenabe') for all suits:
 
 {{<playing-card-row>}}
     {{<playing-card suit="diamond" rank="ace" caption="`11P`">}}
@@ -239,7 +239,7 @@ Notice how the trump jack and nine are worth significantly more points than the 
 
 Since there are no trump cards in these two variants, the remaining points are distributed among the 8, which now counts as much as its face value and keeps the total amount of points in a deck at `152` (just like in a game with trump cards).
 
-**Bottom-Up** ("Undenufe") for all suits:
+**Bottom-Up** ('Undenufe') for all suits:
 
 {{<playing-card-row>}}
     {{<playing-card suit="spade" rank="ace" caption="`0P`">}}
@@ -257,11 +257,17 @@ Similarly to the top-down variant, the 8 now counts as its face value. In additi
 
 **Last Trick**
 
-The team that wins the last trick of a match is awarded an additional 5 points.
+The team that wins the last trick of a deal is awarded an additional 5 points.
+
+**Winning all Tricks**
+
+If a team is able to secure all 9 tricks of a deal, they are awarded an additional 100 points.
 
 **Control**
 
-The total amount of points in a match is always `157` (`152` plus `5` for the last trick), regardless of the chosen trump suit. This can be used as a cross-check after all cards have been counted.
+The total amount of points in a deal is always `157` (`152` plus `5` for the last trick), regardless of the chosen trump suit. This can be used as a cross-check after all cards have been counted.
+
+An optional 100 point bonus for all tricks, and melding bonuses (see [Melding](#melding) below) then further increase the amount of points written for a team.
 
 ### Thanking & Winning the Game
 
@@ -269,30 +275,23 @@ The players determine before the game starts how many points are required to win
 
 It is customary to end the game by thanking the losing team for the game through a handshake.
 
-You don't even have to finish a match: Once you reach the required amount of points, you can stop the game early and declare victory by thanking the opponents. This may be important in close calls. If you however thank _too early_, you will lose the game even if you have more points in total, so be careful.
+You don't even have to finish a deal: Once you reach the required amount of points, you can stop the game early and declare victory by thanking the opponents. This may be important in close calls. If you however thank _too early_, you will lose the game even if you have more points in total, so be careful.
+
+In close situations the standard counting order of Stöck (see [Stöck](#stöck)) - Wys (see [Wys](#wys)) - Stich (meaning 'trick') rule determines the winner.
 
 ## Melding
 
-Jass holds yet another twist, related to _melding_ (in German "Weisen", literally meaning "announcing"). This is an advanced mechanic not necessarily used or known by casual players, so don't feel obliged to read along if you're just starting out. 
+Jass holds yet another twist, related to _melding_ (in German 'Weisen', literally meaning 'announcing'). This is an advanced mechanic not necessarily used or known by casual players, so don't feel obliged to read along if you're just starting out. 
 
-The idea is that at the start of a match players can announce certain valuable combinations of cards in their hands (called "Weise" or "melds"), which they can then count as additional points.
+The idea is that at the start of a deal players can announce certain valuable combinations of cards in their hands (called 'Weise' or 'melds'), which they can then count as additional points.
 
 ### Procedure 
 
-At the start of a match, you look at your hand and check if you have a valid meld.
+At the start of a deal, you look at your hand and check if you have a valid meld.
 
-If you do, you announce it with the _first card_ you play in the first trick of the match. You cannot announce before the previous player completes his turn, or after the next player has played their card. 
+If you do, you announce it with the _first card_ you play in the first trick of the deal. You cannot announce before the previous player completes his turn, or after the next player has played their card. 
 
-The usual card secrecy rules still apply, so you cannot simply tell the exact cards that make up your meld. What you instead announce is either the _type_ of your meld, or the _score_ of your meld. So for example you may say:
-
-{{<columns cols="2">}}
-- three in a row
-- 50 points
-{{<colbreak>}}
-
-- Four of a kind
-- meld of 100
-{{</columns>}}
+The usual card secrecy rules still apply, so you cannot simply tell the exact cards that make up your meld. What you instead announce is just the _score_ of your meld. So for example you may say: '50 points' or '100', but not 'three in a row' or 'four kings' (the cards are declared later, see below).
 
 After the first trick has been played completely, and each player had a chance to announce their meld, it must be determined who is allowed to score their meld. Only _the team with the highest meld_ is allowed to write down the points. The precedence of melds goes as follows:
 
@@ -305,7 +304,7 @@ After the first trick has been played completely, and each player had a chance t
 
 However, you only tell as much as necessary about your meld to determine the winner. So if for example two players announced a meld of 100 points, they first only state if it was a sequence of 5 or a set of four. Only then do they announce the highest card of their meld, and only if still necessary the suite.
 
-If you hold the winning meld however, you need to _declare_ the cards that make up your meld without being asked. You can e.g. say "four cards from spade ace" or "four kings". Only if someone explicitly asks, you have to _show_ the exact cards to all other players, you are however free to do so voluntarily.
+If you hold the winning meld however, you need to _declare_ the cards that make up your meld without being asked. You can e.g. say 'four cards from spade ace' or 'four kings'. Only if someone explicitly asks, you have to _show_ the exact cards to all other players, you may however also do so voluntarily.
 
 The team with the highest melds is allowed to write down _all_ melds if they have multiple melds, from both players.
 
@@ -376,7 +375,7 @@ The following types of melds are generally known and accepted:
     {{<playing-card suit="diamond" rank="jack">}}
     {{<playing-card suit="club" rank="jack">}}
     {{<playing-card suit="spade" rank="jack">}}
-{{</playing-card-row>}}
+{{</row>}}
 
 **8 in a row: _250 Points_**
 
@@ -394,6 +393,7 @@ The following types of melds are generally known and accepted:
 **9 in a row: _300 Points_**
 
 {{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="6">}}
     {{<playing-card suit="heart" rank="7">}}
     {{<playing-card suit="heart" rank="8">}}
     {{<playing-card suit="heart" rank="9">}}
@@ -402,10 +402,9 @@ The following types of melds are generally known and accepted:
     {{<playing-card suit="heart" rank="queen">}}
     {{<playing-card suit="heart" rank="king">}}
     {{<playing-card suit="heart" rank="ace">}}
-    {{<playing-card suit="diamond" rank="7">}}
 {{</playing-card-row>}}
 
-A single card is allowed to be used in **multiple melds** ("Kreuzweise", meaning "cross-meld"). If you can re-use a card for two types of melds, you are free to do so as long as your team has the highest meld.
+A single card is allowed to be used in **multiple melds** ('Kreuzweise', meaning 'cross-meld'). If you can re-use a card for two types of melds, you are free to do so as long as your team has the highest meld.
 
 ### Stöck (Trump Queen & King)
 
