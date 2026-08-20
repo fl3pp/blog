@@ -375,7 +375,7 @@ The following types of melds are generally known and accepted:
     {{<playing-card suit="diamond" rank="jack">}}
     {{<playing-card suit="club" rank="jack">}}
     {{<playing-card suit="spade" rank="jack">}}
-{{</row>}}
+{{</playing-card-row>}}
 
 **8 in a row: _250 Points_**
 
