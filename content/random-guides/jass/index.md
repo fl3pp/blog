@@ -43,7 +43,7 @@ In the following, we will assume a French-suited deck, which corresponds to the 
 
 ### Trick-Taking Mechanics
 
-As in most trick-taking mechanics, a _game_ ("Partie") is played in multiple rounds of _matches_ ("Spiel"), for which each player is dealt a hand of cards. Next, a match proceeds in rounds or "tricks", where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a "Stich", literally translated to "stab".
+As in most trick-taking mechanics, a _game_ ("Partie") is played in multiple rounds of _matches_ ("Spiel"), for which each player is dealt a hand of cards. Next, a match proceeds in rounds or _tricks_, where each player lays down one card from their hand, while the player who played the highest card wins the trick and collects all cards on the table. In Jass, one trick is called a "Stich", literally translated to "stab".
 
 The rules of evaluating the winning card of a trick contain the most complexity for beginners, so I will introduce them step by step.
 
@@ -271,7 +271,151 @@ It is customary to end the game by thanking the losing team for the game through
 
 You don't even have to finish a match: Once you reach the required amount of points, you can stop the game early and declare victory by thanking the opponents. This may be important in close calls. If you however thank _too early_, you will lose the game even if you have more points in total, so be careful.
 
+## Melding
+
+Jass holds yet another twist, related to _melding_ (in German "Weisen", literally meaning "announcing"). This is an advanced mechanic not necessarily used or known by casual players, so don't feel obliged to read along if you're just starting out. 
+
+The idea is that at the start of a match players can announce certain valuable combinations of cards in their hands (called "Weise" or "melds"), which they can then count as additional points.
+
+### Procedure 
+
+At the start of a match, you look at your hand and check if you have a valid meld.
+
+If you do, you announce it with the _first card_ you play in the first trick of the match. You cannot announce before the previous player completes his turn, or after the next player has played their card. 
+
+The usual card secrecy rules still apply, so you cannot simply tell the exact cards that make up your meld. What you instead announce is either the _type_ of your meld, or the _score_ of your meld. So for example you may say:
+
+{{<columns cols="2">}}
+- three in a row
+- 50 points
+{{<colbreak>}}
+
+- Four of a kind
+- meld of 100
+{{</columns>}}
+
+After the first trick has been played completely, and each player had a chance to announce their meld, it must be determined who is allowed to score their meld. Only _the team with the highest meld_ is allowed to write down the points. The precedence of melds goes as follows:
+
+1. The meld with the highest score wins
+2. If one meld is a sequence and the other multiple of a kind, the sequence wins
+3. If both melds are of the same type, the highest card of the meld is decisive
+   1. The card with the higher trick value (keep the bottom-up variant in mind)
+   2. If one card is a trump card, the trump card wins
+   3. The meld that was announced first wins
+
+However, you only tell as much as necessary about your meld to determine the winner. So if for example two players announced a meld of 100 points, they first only state if it was a sequence of 5 or a set of four. Only then do they announce the highest card of their meld, and only if still necessary the suite.
+
+If you hold the winning meld however, you need to _declare_ the cards that make up your meld without being asked. You can e.g. say "four cards from spade ace" or "four kings". Only if someone explicitly asks, you have to _show_ the exact cards to all other players, you are however free to do so voluntarily.
+
+The team with the highest melds is allowed to write down _all_ melds if they have multiple melds, from both players.
+
+### Meld Types
+
+The following types of melds are generally known and accepted:
+
+**3 in a row: _20 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+{{</playing-card-row>}}
+
+**4 in a row: _50 Points_** (loses to 4 of a kind)
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="heart" rank="10">}}
+{{</playing-card-row>}}
+
+**4 of a kind: _100 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="diamond" rank="7">}}
+    {{<playing-card suit="club" rank="7">}}
+    {{<playing-card suit="spade" rank="7">}}
+{{</playing-card-row>}}
+
+**5 in a row: _100 Points_** (wins over 4 of a kind)
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="heart" rank="10">}}
+    {{<playing-card suit="heart" rank="jack">}}
+{{</playing-card-row>}}
+
+**6 in a row: _150 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="heart" rank="10">}}
+    {{<playing-card suit="heart" rank="jack">}}
+    {{<playing-card suit="heart" rank="queen">}}
+{{</playing-card-row>}}
+
+**Set of 9s: _150 Points_** (loses to 6 in a row)
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="diamond" rank="9">}}
+    {{<playing-card suit="club" rank="9">}}
+    {{<playing-card suit="spade" rank="9">}}
+{{</playing-card-row>}}
+
+**Set of Jacks: _200 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="jack">}}
+    {{<playing-card suit="diamond" rank="jack">}}
+    {{<playing-card suit="club" rank="jack">}}
+    {{<playing-card suit="spade" rank="jack">}}
+{{</playing-card-row>}}
+
+**8 in a row: _250 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="heart" rank="10">}}
+    {{<playing-card suit="heart" rank="jack">}}
+    {{<playing-card suit="heart" rank="queen">}}
+    {{<playing-card suit="heart" rank="king">}}
+    {{<playing-card suit="heart" rank="ace">}}
+{{</playing-card-row>}}
+
+**9 in a row: _300 Points_**
+
+{{<playing-card-row>}}
+    {{<playing-card suit="heart" rank="7">}}
+    {{<playing-card suit="heart" rank="8">}}
+    {{<playing-card suit="heart" rank="9">}}
+    {{<playing-card suit="heart" rank="10">}}
+    {{<playing-card suit="heart" rank="jack">}}
+    {{<playing-card suit="heart" rank="queen">}}
+    {{<playing-card suit="heart" rank="king">}}
+    {{<playing-card suit="heart" rank="ace">}}
+    {{<playing-card suit="diamond" rank="7">}}
+{{</playing-card-row>}}
+
+A single card is allowed to be used in **multiple melds** ("Kreuzweise", meaning "cross-meld"). If you can re-use a card for two types of melds, you are free to do so as long as your team has the highest meld.
+
+### Stöck (Trump Queen & King)
+
+There is one additional meld that is not part of the mechanism described above: The king and queen of the trump suit. They are called 'Stöck' (I'm unsure how to translate that literally, so I won't) and award 20 points regardless of the winning meld, so they are always valid.
+
+Stöck are usually _declared_ when you play the second of the two. So if you play say the trump queen first, and then 5 tricks later the trump king, you announce the Stöck when you play the king. There is one exception to this rule: If you win the right to meld, and the two are part of another meld (say, including the ace as a sequence of 3), you can announce the Stöck when you declare the meld, as at that point they would be known anyway.
+
 ---
+
+## Attributions
 
 Attribution for these great illustrations goes to Chris Aguilar:
 
@@ -281,3 +425,14 @@ https://totalnonsense.com/open-source-vector-playing-cards/
 Copyright 2011,2024 – Chris Aguilar – conjurenation@gmail.com
 Licensed under: LGPL 3.0 - https://www.gnu.org/licenses/lgpl-3.0.html
 ```
+
+Unfortunately I did not keep a thorough record of all sources I've used for this post and over the years, but a good bit can be taken from this list:
+
+[Jassverzeichnis](https://jassverzeichnis.ch/)
+: Blog, Shop and event organizer for Jass in Switzerland. Also contains a larger number of very informational guides and articles
+
+[Puur, Näll, As](https://shop.jassverzeichnis.ch/products/Offizielles-Jassreglement-nach-G%C3%B6pf-Egg-p214771111)
+: The official Jass rulebook by Göpf Egg and Albert Hagenbucher. It is not particularly beginner-friendly, but can answer any detail question you may have and historically contributed greatly to the unification of Jass rules
+
+[Schweizer Jass](https://www.schweizerjass.ch/)
+: Website with rules and a shop
