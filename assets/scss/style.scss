@@ -107,6 +107,15 @@ table {
     }
 }
 
+.columns {
+    margin-top: 2px;
+    column-gap: 2rem;
+
+    li, ul {
+        margin-top: 0px;
+    }
+}
+
 .overflow-table {
     @include overflow-x;
 
