@@ -677,3 +677,50 @@ pre {
         }
     }
 }
+
+.playing-card {
+    .card-corner {
+        width: 2.5em;
+        height: 4em;
+
+        border: 1px solid #000;
+
+        overflow: hidden;
+
+        border-radius: 0.5em 0 0 0;
+        position: relative;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .card-corner img {
+        width: 11em;
+        height: auto;
+        display: block;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .card-corner .card-order {
+        position: absolute;
+        top: -.15em;
+        left: 1.3em;
+
+        width: .9em;
+        background-color: black;
+        color: white;
+        text-align: center;
+        border-radius: 0 0 0 .4em;
+
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    .card-caption {
+        height: 1.3em;
+        text-align: center;
+    }
+}
