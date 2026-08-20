@@ -3,7 +3,7 @@
 {{ $captionAbove := .Get "captionAbove" }}
 {{ $caption := .Get "caption" }}
 {{ $order := .Get "order" }}
-{{ $imagePath := printf "/playing-cards/STANDARD-BORDERED/%[1]s-%[2]s.svg" $suit $rank }}
+{{ $imagePath := printf "/playing-cards/STANDARD-BORDERED/%[1]s-%[2]s.svg" (upper $suit) (upper $rank) }}
 
 <style>
 .card-corner {
